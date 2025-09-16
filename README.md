@@ -87,7 +87,7 @@ Tahap terakhir adalah pembuatan data mart, yang dirancang khusus untuk mendukung
 - Abraham Jordy Ollen
 - Ardi Kurniawan Kusuma
 - Marco Tuwanakotta
-- Rifqi Aziz
+- Rifqi Nadhir Aziz
 - Tazqia Ranyanisha
 
 ---
