@@ -3,7 +3,7 @@
 
 ## **Latar Belakang**
 
-Pemerintah memiliki tujuan untuk mempercepat adopsi kendaraan listrik (EV) sebagai bagian dari komitmen terhadap Tujuan Pembangunan Berkelanjutan (SDGs) PBB, khususnya **Goal 7 (Energi Bersih)**, **Goal 11 (Kota Berkelanjutan)**, dan **Goal 13 (Aksi Iklim)**. Namun, data saat ini menunjukkan bahwa penyebaran EV tidak merata, dengan beberapa wilayah (county) yang tertinggal jauh. Diduga, faktor sosio-ekonomi seperti **Upah Minimum Regional (UMR)** dan karakteristik wilayah seperti **kepadatan penduduk** menjadi penghalang utama.
+Pemerintah memiliki tujuan untuk mempercepat adopsi kendaraan listrik (EV) sebagai bagian dari komitmen terhadap Tujuan Pembangunan Berkelanjutan (SDGs) PBB, khususnya Goal 7 (Energi Bersih), Goal 11 (Kota Berkelanjutan), dan Goal 13 (Aksi Iklim). Namun, data saat ini menunjukkan bahwa penyebaran EV tidak merata, dengan beberapa wilayah (county) yang tertinggal jauh. Diduga, faktor sosio-ekonomi seperti Upah Minimum Regional (UMR) dan karakteristik wilayah seperti kepadatan penduduk menjadi penghalang utama.
 
 Analisis ini bertujuan untuk mengidentifikasi wilayah-wilayah dengan tingkat penetrasi EV yang rendah, memahami hubungannya dengan faktor ekonomi, dan merekomendasikan model-model EV yang paling cocok untuk disubsidi di wilayah tersebut. Dengan demikian, program subsidi pemerintah dapat menjadi lebih tepat sasaran, efektif, dan mendorong adopsi yang lebih merata.
 
@@ -17,23 +17,27 @@ Penyebaran kendaraan listrik (EV) di Indonesia masih belum merata, dengan bebera
 
 ## **Defining the Problem Statement (Kerangka SMART)**
 
-* **Specific (Spesifik)**: Mengidentifikasi county dengan tingkat penetrasi EV (jumlah EV per kapita) rendah. Menganalisis karakteristik UMR dan kepadatan penduduknya, lalu merekomendasikan model EV yang terjangkau dan populer di wilayah lain dengan karakteristik serupa sebagai target subsidi.
-* **Measurable (Terukur)**: Mengukur tingkat penetrasi EV, rata-rata UMR, kepadatan penduduk, serta pangsa pasar dan harga dari model-model EV yang relevan.
-* **Achievable (Dapat Dicapai)**: Analisis dapat dicapai menggunakan empat dataset yang disediakan (EV Population, UMR, Harga Mobil, Populasi Total) dan library Python dalam waktu yang ditentukan.
-* **Relevant (Relevan)**: Hasil analisis akan memberikan rekomendasi langsung yang dapat digunakan untuk merancang kebijakan subsidi yang lebih efektif dan adil, mendukung **SDG 10 (Mengurangi Kesenjangan)** selain tujuan lingkungan.
-* **Time-Bound (Terikat Waktu)**: Analisis diselesaikan sesuai timeline proyek untuk memberikan masukan kebijakan yang relevan.
+* **Specific**: Mengidentifikasi county dengan tingkat penetrasi EV (jumlah EV per kapita) rendah. Menganalisis karakteristik UMR dan kepadatan penduduknya, lalu merekomendasikan model EV yang terjangkau dan populer di wilayah lain dengan karakteristik serupa sebagai target subsidi.
+
+* **Measurable**: Mengukur tingkat penetrasi EV, rata-rata UMR, kepadatan penduduk, serta pangsa pasar dan harga dari model-model EV yang relevan.
+
+* **Achievable**: Analisis dapat dicapai menggunakan empat dataset yang disediakan (EV Population, UMR, Harga Mobil, Populasi Total) dan library Python dalam waktu yang ditentukan.
+
+* **Relevant**: Hasil analisis akan memberikan rekomendasi langsung yang dapat digunakan untuk merancang kebijakan subsidi yang lebih efektif dan adil, mendukung SDG 10 (Mengurangi Kesenjangan) selain tujuan lingkungan.
+
+* **Time-Bound**: Analisis diselesaikan sesuai timeline proyek untuk memberikan masukan kebijakan yang relevan.
 
 ---
 
 ## **Key Questions**
 
-1.  Bagaimana distribusi, tendensi sentral, dispersi (sebaran), dan outlier pada data numerik kunci: **Harga Mobil**, **Jangkauan Listrik (Electric Range)**, **UMR**, dan **Kepadatan Penduduk**?
+1. ⁠Bagaimana distribusi, tendensi sentral, dispersi (sebaran), dan outlier pada data numerik kunci: Harga Mobil, Jangkauan Listrik (Electric Range), UMR, dan Kepadatan Penduduk?
 
-2.  Bagaimana peta penyebaran EV di seluruh county? County mana saja yang memiliki tingkat penetrasi EV (jumlah EV per kapita) **tertinggi** dan **terendah**?
+2. ⁠Bagaimana tingkat penetrasi EV di tiap county jika dibandingkan dengan total populasi, dan sejauh mana tingkat UMR di wilayah tersebut memengaruhi keterjangkauan EV?
 
-3.  Di county dengan tingkat penetrasi tinggi, model EV apa yang paling populer dan terjangkau (berdasarkan harga)?
+3. ⁠Model EV apa yang paling banyak diminati, berapa harganya, dan sejauh mana harga tersebut sebanding dengan pendapatan tahunan masyarakat?
 
-4.  Apakah terdapat perbedaan yang signifikan secara statistik dalam tingkat penetrasi EV antara kelompok (cluster) county yang memiliki karakteristik UMR dan kepadatan penduduk yang serupa?
+4. ⁠Apakah terdapat perbedaan yang signifikan secara statistik dalam tingkat penetrasi EV antara kelompok (cluster) county yang memiliki karakteristik UMR dan kepadatan penduduk yang serupa?
 
 ---
 
