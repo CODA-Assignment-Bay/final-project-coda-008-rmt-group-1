@@ -1,0 +1,93 @@
+# **Analisis Penargetan Subsidi Kendaraan Listrik (EV) untuk Mendorong Adopsi yang Merata di Seluruh County Berdasarkan Faktor Sosio-Ekonomi.**
+---
+
+## **Latar Belakang**
+
+Pemerintah memiliki tujuan untuk mempercepat adopsi kendaraan listrik (EV) sebagai bagian dari komitmen terhadap Tujuan Pembangunan Berkelanjutan (SDGs) PBB, khususnya **Goal 7 (Energi Bersih)**, **Goal 11 (Kota Berkelanjutan)**, dan **Goal 13 (Aksi Iklim)**. Namun, data saat ini menunjukkan bahwa penyebaran EV tidak merata, dengan beberapa wilayah (county) yang tertinggal jauh. Diduga, faktor sosio-ekonomi seperti **Upah Minimum Regional (UMR)** dan karakteristik wilayah seperti **kepadatan penduduk** menjadi penghalang utama.
+
+Analisis ini bertujuan untuk mengidentifikasi wilayah-wilayah dengan tingkat penetrasi EV yang rendah, memahami hubungannya dengan faktor ekonomi, dan merekomendasikan model-model EV yang paling cocok untuk disubsidi di wilayah tersebut. Dengan demikian, program subsidi pemerintah dapat menjadi lebih tepat sasaran, efektif, dan mendorong adopsi yang lebih merata.
+
+---
+
+## **Problem Statement**
+
+Penyebaran kendaraan listrik (EV) di Indonesia masih belum merata, dengan beberapa county menunjukkan tingkat penetrasi EV yang rendah. Kondisi ini diduga dipengaruhi oleh faktor sosio-ekonomi seperti rendahnya Upah Minimum Regional (UMR) serta karakteristik wilayah seperti kepadatan penduduk. Tanpa analisis yang tepat, kebijakan subsidi pemerintah berisiko tidak efektif dan tidak tepat sasaran. Oleh karena itu, perlu dilakukan identifikasi wilayah dengan penetrasi EV rendah, analisis hubungan dengan faktor ekonomi, serta rekomendasi model EV yang paling sesuai untuk disubsidi agar program pemerintah dapat lebih adil, efisien, dan mendorong adopsi EV secara merata.
+
+---
+
+## **Defining the Problem Statement (Kerangka SMART)**
+
+* **Specific (Spesifik)**: Mengidentifikasi county dengan tingkat penetrasi EV (jumlah EV per kapita) rendah. Menganalisis karakteristik UMR dan kepadatan penduduknya, lalu merekomendasikan model EV yang terjangkau dan populer di wilayah lain dengan karakteristik serupa sebagai target subsidi.
+* **Measurable (Terukur)**: Mengukur tingkat penetrasi EV, rata-rata UMR, kepadatan penduduk, serta pangsa pasar dan harga dari model-model EV yang relevan.
+* **Achievable (Dapat Dicapai)**: Analisis dapat dicapai menggunakan empat dataset yang disediakan (EV Population, UMR, Harga Mobil, Populasi Total) dan library Python dalam waktu yang ditentukan.
+* **Relevant (Relevan)**: Hasil analisis akan memberikan rekomendasi langsung yang dapat digunakan untuk merancang kebijakan subsidi yang lebih efektif dan adil, mendukung **SDG 10 (Mengurangi Kesenjangan)** selain tujuan lingkungan.
+* **Time-Bound (Terikat Waktu)**: Analisis diselesaikan sesuai timeline proyek untuk memberikan masukan kebijakan yang relevan.
+
+---
+
+## **Key Questions**
+
+1.  Bagaimana distribusi, tendensi sentral, dispersi (sebaran), dan outlier pada data numerik kunci: **Harga Mobil**, **Jangkauan Listrik (Electric Range)**, **UMR**, dan **Kepadatan Penduduk**?
+
+2.  Bagaimana peta penyebaran EV di seluruh county? County mana saja yang memiliki tingkat penetrasi EV (jumlah EV per kapita) **tertinggi** dan **terendah**?
+
+3.  Di county dengan tingkat penetrasi tinggi, model EV apa yang paling populer dan terjangkau (berdasarkan harga)?
+
+4.  Apakah terdapat perbedaan yang signifikan secara statistik dalam tingkat penetrasi EV antara kelompok (cluster) county yang memiliki karakteristik UMR dan kepadatan penduduk yang serupa?
+
+---
+
+## **Datasets**
+
+https://catalog.data.gov/dataset/electric-vehicle-population-data
+
+https://data.wa.gov/demographics/WAOFM-Census-Population-Density-by-County-by-Decad/e6ip-wkqq/about_data
+
+https://data.wa.gov/demographics/WAOFM-April-1-Population-by-State-County-and-City-/2hia-rqet/about_data
+
+https://hdpulse.nimhd.nih.gov/data-portal/social/table?age=001&age_options=ageall_1&demo=00011&demo_options=income_3&race=00&race_options=race_7&sex=0&sex_options=sexboth_1&socialtopic=030&socialtopic_options=social_6&statefips=53&statefips_options=area_states
+
+https://afdc.energy.gov/vehicles/search/download?utm_source=chatgpt.com
+
+* Feature datasets:
+
+- Dataset shows the Battery Electric Vehicles (BEVs) and Plug-in Hybrid Electric Vehicles (PHEVs) that are currently registered through Washington State Department of Licensing (DOL).
+- Washington state population density by county by decade 1900 to 2020.
+- Intercensal and postcensal population estimates for the state, counties and cities, 1990 to present.
+- Income (Median household income) for Washington by County
+All Races (includes Hispanic/Latino), Both Sexes, All Ages, 2019-2023
+Sorted by Value (Dollars).
+- Dataset includes various vehicle types such as all-electric vehicles (EVs), plug-in hybrid electric vehicles (PHEVs), hybrid electric vehicles (HEVs), flexible fuel vehicles (FFVs), biodiesel vehicles, and compressed natural gas (CNG) vehicles.
+
+---
+
+## **Data Pipeline**
+
+Proses dimulai dengan perancangan data modeling, di mana ditentukan dimension table dan fact table yang sesuai dengan kebutuhan analisis. Selanjutnya dilakukan extract data dari sumber dataset, dilanjutkan dengan data cleaning dan data transformation untuk memastikan kualitas dan konsistensi data.
+
+Setelah itu, data akan divalidasi secara menyeluruh sebelum dilakukan load ke Supabase (PostgreSQL). Seluruh proses ETL diotomasi menggunakan Airflow untuk menjamin efisiensi, konsistensi, dan keterulangan proses.
+
+Tahap terakhir adalah pembuatan data mart, yang dirancang khusus untuk mendukung kebutuhan analisis dan pengambilan keputusan berbasis data.
+
+---
+
+## **Tools**
+
+- Supabase (Postgresql)
+- Apache Airflow
+- Docker
+- Python
+- Pyspark
+- Tableau
+
+---
+
+## **Contributors**
+
+- Abraham Jordy Ollen
+- Ardi Kurniawan Kusuma
+- Marco Tuwanakotta
+- Rifqi Aziz
+- Tazqia Ranyanisha
+
+---
