@@ -1,4 +1,4 @@
-county,population,min_wage,ev_count,ev_penetration_rate
+county,population,avg_wage,ev_count,ev_penetration_rate
 ADAMS,55010,65042,103,1.8723868387565898
 ASOTIN,53965,69107,97,1.7974613175206153
 BENTON,620895,87316,3705,5.967192520474477
