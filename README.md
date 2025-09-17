@@ -73,12 +73,13 @@ Tahap terakhir adalah pembuatan data mart, yang dirancang khusus untuk mendukung
 
 ## **Tools**
 
-- Supabase (Postgresql)
+- Supabase
 - Apache Airflow
 - Docker
 - Python
 - Pyspark
-- Tableau
+- Looker Studio
+- Google Api
 
 ---
 
@@ -89,5 +90,23 @@ Tahap terakhir adalah pembuatan data mart, yang dirancang khusus untuk mendukung
 - Marco Tuwanakotta
 - Rifqi Aziz
 - Tazqia Ranyanisha
+
+---
+
+## **Datamart**
+
+https://docs.google.com/spreadsheets/d/1bcMdN7tpZzxAFVduj5v-pYVy0ovezBrzcRdx14BZaVs/edit?gid=1216836236#gid=1216836236
+
+---
+
+## **Dashboard**
+
+
+
+---
+
+## **Presentation**
+
+https://docs.google.com/presentation/d/11T9XdyOLYDkYZdKXZwNFe7baQ3cE7pV5/edit?usp=sharing&ouid=115670577210267877252&rtpof=true&sd=true
 
 ---

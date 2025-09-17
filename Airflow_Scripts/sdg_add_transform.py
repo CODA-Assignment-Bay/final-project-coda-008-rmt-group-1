@@ -83,6 +83,8 @@ df_clean = agg_df_2025.select("county", "pop_2025")
  .option("user", db_properties["user"]) # Username for authentication.
  .option("password", db_properties["password"]) # Password for authentication.
  .option("driver", db_properties["driver"]) # Driver for PostgreSQL.
+ .option("batchsize", 1000)  # Set JDBC batch size.
+ .option("isolationLevel", "NONE")  # Optional: reduce locking overhead.
  .mode("overwrite") # Overwrite the table if it exists.
  .save() # Save the DataFrame to the database.
 )
@@ -116,6 +118,8 @@ df_clean = df_clean.select("county", "popden_2025")
  .option("user", db_properties["user"]) # Username for authentication.
  .option("password", db_properties["password"]) # Password for authentication.
  .option("driver", db_properties["driver"]) # Driver for PostgreSQL.
+ .option("batchsize", 1000)  # Set JDBC batch size.
+ .option("isolationLevel", "NONE")  # Optional: reduce locking overhead.
  .mode("overwrite") # Overwrite the table if it exists.
  .save() # Save the DataFrame to the database.
 )
@@ -134,8 +138,8 @@ df = (
 
 # Convert and clean columns directly:
 df_clean = (
-    df.withColumn("model", col("Model_Car").cast(StringType())) # Cast Model_Car to string and rename it as 'model'.
-      .withColumn("price_usd", col("Sales_Price_2025 (usd)").cast(IntegerType())) # Cast Sales_Price_2025 (usd) to integer and rename it as 'price_usd'.
+    df.withColumn("model", col("Model").cast(StringType())) # Cast Model_Car to string and rename it as 'model'.
+      .withColumn("price_usd", col("Price_2025").cast(IntegerType())) # Cast Sales_Price_2025 (usd) to integer and rename it as 'price_usd'.
 )
 
 # Keep only the two relevant columns: 'model' and 'price_usd'.
@@ -149,6 +153,8 @@ df_clean = df_clean.select("model", "price_usd")
  .option("user", db_properties["user"]) # Username for authentication.
  .option("password", db_properties["password"]) # Password for authentication.
  .option("driver", db_properties["driver"]) # Driver for PostgreSQL.
+ .option("batchsize", 1000)  # Set JDBC batch size.
+ .option("isolationLevel", "NONE")  # Optional: reduce locking overhead.
  .mode("overwrite") # Overwrite the table if it exists.
  .save() # Save the DataFrame to the database.
 )
@@ -182,6 +188,8 @@ df_clean = df_clean.select("county", "income")
  .option("user", db_properties["user"]) # Username for authentication.
  .option("password", db_properties["password"]) # Password for authentication.
  .option("driver", db_properties["driver"]) # Driver for PostgreSQL.
+ .option("batchsize", 1000)  # Set JDBC batch size.
+ .option("isolationLevel", "NONE")  # Optional: reduce locking overhead.
  .mode("overwrite") # Overwrite the table if it exists.
  .save() # Save the DataFrame to the database.
 )

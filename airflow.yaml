@@ -4,6 +4,8 @@ x-common:
   user: "${AIRFLOW_UID}:0"
   env_file: 
     - .env
+  environment:
+    - GOOGLE_APPLICATION_CREDENTIALS=/opt/airflow/data/api_keys/apikeyweb-1541242050469-eeba1d2f811d.json
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
@@ -11,6 +13,8 @@ x-common:
     - ./data:/opt/airflow/data
     - /var/run/docker.sock:/var/run/docker.sock
     - ./jars:/opt/airflow/jars
+    - ./data/api_keys:/opt/airflow/data/api_keys
+    
 
 x-depends-on:
   &depends-on

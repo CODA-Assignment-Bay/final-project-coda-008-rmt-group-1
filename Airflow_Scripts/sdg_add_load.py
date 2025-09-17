@@ -57,6 +57,8 @@ df = (
  .option("user", db_properties["user"]) # Username for authentication.
  .option("password", db_properties["password"]) # Password for authentication.
  .option("driver", db_properties["driver"]) # Driver for PostgreSQL.
+ .option("batchsize", 1000)  # Set JDBC batch size.
+ .option("isolationLevel", "NONE")  # Optional: reduce locking overhead.
  .mode("overwrite") # Overwrite the table if it exists.
  .save() # Save the DataFrame to the database.
 )
@@ -80,6 +82,8 @@ df = (
  .option("user", db_properties["user"]) # Username for authentication.
  .option("password", db_properties["password"]) # Password for authentication.
  .option("driver", db_properties["driver"]) # Driver for PostgreSQL.
+ .option("batchsize", 1000)  # Set JDBC batch size.
+ .option("isolationLevel", "NONE")  # Optional: reduce locking overhead. 
  .mode("overwrite") # Overwrite the table if it exists.
  .save() # Save the DataFrame to the database.
 )
@@ -103,6 +107,8 @@ df = (
  .option("user", db_properties["user"]) # Username for authentication.
  .option("password", db_properties["password"]) # Password for authentication.
  .option("driver", db_properties["driver"]) # Driver for PostgreSQL.
+ .option("batchsize", 1000)  # Set JDBC batch size.
+ .option("isolationLevel", "NONE")  # Optional: reduce locking overhead.
  .mode("overwrite") # Overwrite the table if it exists.
  .save() # Save the DataFrame to the database.
 )
@@ -126,6 +132,8 @@ df = (
  .option("user", db_properties["user"]) # Username for authentication.
  .option("password", db_properties["password"]) # Password for authentication.
  .option("driver", db_properties["driver"]) # Driver for PostgreSQL.
+ .option("batchsize", 1000)  # Set JDBC batch size.
+ .option("isolationLevel", "NONE")  # Optional: reduce locking overhead.
  .mode("overwrite") # Overwrite the table if it exists.
  .save() # Save the DataFrame to the database.
 )
