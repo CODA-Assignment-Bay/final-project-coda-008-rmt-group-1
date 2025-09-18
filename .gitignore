@@ -2,6 +2,7 @@
 __pycache__/
 dags/__pycache__/
 *.py[cod]
+D:\Ardi Kurniawan Kusuma\HACKTIV8\CODA_RMT_008\PHASE 2\WEEK 4\final-project-coda-008-rmt-group-1\Data\api_keys
 
 # C extensions
 *.so

@@ -1,40 +1,40 @@
 county,county_id
-Adams,824633720832
-Asotin,807453851648
-Benton,670014898176
-Chelan,1082331758592
-Clallam,1563368095744
-Clark,1194000908288
-Columbia,1571958030336
-Cowlitz,1065151889408
-Douglas,1451698946048
-Ferry,17179869184
-Franklin,120259084288
-Garfield,996432412673
-Grant,996432412672
-Grays Harbor,369367187456
-Island,1254130450432
-Jefferson,1606317768704
-King,481036337152
-Kitsap,146028888064
-Kittitas,60129542144
-Klickitat,1657857376256
-Lewis,764504178688
-Lincoln,876173328384
-Mason,541165879297
-Okanogan,292057776128
-Pacific,1022202216448
-Pend Oreille,635655159808
-Pierce,541165879296
-San Juan,1116691496960
-Skagit,592705486848
-Skamania,1314259992576
-Snohomish,103079215104
-Spokane,1211180777472
-Stevens,1348619730944
-Thurston,0
-Wahkiakum,1382979469312
-Walla Walla,1614907703296
-Whatcom,515396075520
-Whitman,884763262976
-Yakima,833223655424
+Adams,1
+Asotin,2
+Benton,3
+Chelan,4
+Clallam,5
+Clark,6
+Columbia,7
+Cowlitz,8
+Douglas,9
+Ferry,10
+Franklin,11
+Garfield,12
+Grant,13
+Grays Harbor,14
+Island,15
+Jefferson,16
+King,17
+Kitsap,18
+Kittitas,19
+Klickitat,20
+Lewis,21
+Lincoln,22
+Mason,23
+Okanogan,24
+Pacific,25
+Pend Oreille,26
+Pierce,27
+San Juan,28
+Skagit,29
+Skamania,30
+Snohomish,31
+Spokane,32
+Stevens,33
+Thurston,34
+Wahkiakum,35
+Walla Walla,36
+Whatcom,37
+Whitman,38
+Yakima,39

@@ -3,7 +3,7 @@
 
 ## **Latar Belakang**
 
-Pemerintah memiliki tujuan untuk mempercepat adopsi kendaraan listrik (EV) sebagai bagian dari komitmen terhadap Tujuan Pembangunan Berkelanjutan (SDGs) PBB, khususnya Goal 7 (Energi Bersih), Goal 11 (Kota Berkelanjutan), dan Goal 13 (Aksi Iklim). Namun, data saat ini menunjukkan bahwa penyebaran EV tidak merata, dengan beberapa wilayah (county) yang tertinggal jauh. Diduga, faktor sosio-ekonomi seperti Upah Minimum Regional (UMR) dan karakteristik wilayah seperti kepadatan penduduk menjadi penghalang utama.
+Pemerintah memiliki tujuan untuk mempercepat adopsi kendaraan listrik (EV) sebagai bagian dari komitmen terhadap Tujuan Pembangunan Berkelanjutan (SDGs) PBB, khususnya Goal 7 (Energi Bersih), Goal 11 (Kota Berkelanjutan), dan Goal 13 (Aksi Iklim). Namun, data saat ini menunjukkan bahwa penyebaran EV tidak merata, dengan beberapa wilayah (county) yang tertinggal jauh. Diduga, faktor sosio-ekonomi seperti Upah Minimum Regional (Gaji rata-rata) dan karakteristik wilayah seperti kepadatan penduduk menjadi penghalang utama.
 
 Analisis ini bertujuan untuk mengidentifikasi wilayah-wilayah dengan tingkat penetrasi EV yang rendah, memahami hubungannya dengan faktor ekonomi, dan merekomendasikan model-model EV yang paling cocok untuk disubsidi di wilayah tersebut. Dengan demikian, program subsidi pemerintah dapat menjadi lebih tepat sasaran, efektif, dan mendorong adopsi yang lebih merata.
 
@@ -11,17 +11,17 @@ Analisis ini bertujuan untuk mengidentifikasi wilayah-wilayah dengan tingkat pen
 
 ## **Problem Statement**
 
-Penyebaran kendaraan listrik (EV) di Indonesia masih belum merata, dengan beberapa county menunjukkan tingkat penetrasi EV yang rendah. Kondisi ini diduga dipengaruhi oleh faktor sosio-ekonomi seperti rendahnya Upah Minimum Regional (UMR) serta karakteristik wilayah seperti kepadatan penduduk. Tanpa analisis yang tepat, kebijakan subsidi pemerintah berisiko tidak efektif dan tidak tepat sasaran. Oleh karena itu, perlu dilakukan identifikasi wilayah dengan penetrasi EV rendah, analisis hubungan dengan faktor ekonomi, serta rekomendasi model EV yang paling sesuai untuk disubsidi agar program pemerintah dapat lebih adil, efisien, dan mendorong adopsi EV secara merata.
+Penyebaran kendaraan listrik (EV) di Washington masih belum merata, dengan beberapa county menunjukkan tingkat penetrasi EV yang rendah. Kondisi ini diduga dipengaruhi oleh faktor sosio-ekonomi seperti rendahnya Upah Minimum Regional (Gaji rata-rata) serta karakteristik wilayah seperti kepadatan penduduk. Tanpa analisis yang tepat, kebijakan subsidi pemerintah berisiko tidak efektif dan tidak tepat sasaran. Oleh karena itu, perlu dilakukan identifikasi wilayah dengan penetrasi EV rendah, analisis hubungan dengan faktor ekonomi, serta rekomendasi model EV yang paling sesuai untuk disubsidi agar program pemerintah dapat lebih adil, efisien, dan mendorong adopsi EV secara merata.
 
 ---
 
 ## **Defining the Problem Statement (Kerangka SMART)**
 
-* **Specific**: Mengidentifikasi county dengan tingkat penetrasi EV (jumlah EV per kapita) rendah. Menganalisis karakteristik UMR dan kepadatan penduduknya, lalu merekomendasikan model EV yang terjangkau dan populer di wilayah lain dengan karakteristik serupa sebagai target subsidi.
+* **Specific**: Mengidentifikasi county, lalu menganalisis karakteristik UMR dan kepadatan penduduk untuk menetapkan strategi subsidi berbasis diferensiasi wilayah.
 
-* **Measurable**: Mengukur tingkat penetrasi EV, rata-rata UMR, kepadatan penduduk, serta pangsa pasar dan harga dari model-model EV yang relevan.
+* **Measurable**: Mengukur tingkat penetrasi EV, rata-rata Gaji rata-rata, kepadatan penduduk, serta pangsa pasar dan harga dari model-model EV yang relevan.
 
-* **Achievable**: Analisis dapat dicapai menggunakan empat dataset yang disediakan (EV Population, UMR, Harga Mobil, Populasi Total) dan library Python dalam waktu yang ditentukan.
+* **Achievable**: Analisis dapat dicapai menggunakan empat dataset yang disediakan (EV Population, Gaji rata-rata, Harga Mobil, Populasi Total) dan library Python dalam waktu yang ditentukan.
 
 * **Relevant**: Hasil analisis akan memberikan rekomendasi langsung yang dapat digunakan untuk merancang kebijakan subsidi yang lebih efektif dan adil, mendukung SDG 10 (Mengurangi Kesenjangan) selain tujuan lingkungan.
 
@@ -31,13 +31,15 @@ Penyebaran kendaraan listrik (EV) di Indonesia masih belum merata, dengan bebera
 
 ## **Key Questions**
 
-1. ⁠Bagaimana distribusi, tendensi sentral, dispersi (sebaran), dan outlier pada data numerik kunci: Harga Mobil, Jangkauan Listrik (Electric Range), UMR, dan Kepadatan Penduduk?
+1. ⁠Bagaimana distribusi, tendensi sentral, dispersi (sebaran), dan outlier pada data numerik kunci: Harga Mobil, Jangkauan Listrik (Electric Range), Gaji rata-rata, dan Kepadatan Penduduk?
 
-2. ⁠Bagaimana tingkat penetrasi EV di tiap county jika dibandingkan dengan total populasi, dan sejauh mana tingkat UMR di wilayah tersebut memengaruhi keterjangkauan EV?
+2. Faktor apa yang paling mempengaruhi penetrasi EV di tiap county?
 
-3. ⁠Model EV apa yang paling banyak diminati, berapa harganya, dan sejauh mana harga tersebut sebanding dengan pendapatan tahunan masyarakat?
+3. ⁠Bagaimana tingkat penetrasi EV di tiap county jika dibandingkan dengan total populasi, dan sejauh mana tingkat Gaji rata-rata di wilayah tersebut memengaruhi keterjangkauan EV?
 
-4. ⁠Apakah terdapat perbedaan yang signifikan secara statistik dalam tingkat penetrasi EV antara kelompok (cluster) county yang memiliki karakteristik UMR dan kepadatan penduduk yang serupa?
+4. ⁠Model EV apa yang paling banyak diminati, berapa harganya, dan sejauh mana harga tersebut sebanding dengan pendapatan tahunan masyarakat?
+
+5. Apakah terdapat perbedaan signifikan secara statistik dalam rata-rata tingkat penetrasi EV antara kelompok county dengan upah tinggi (kuartil atas) dan kelompok county dengan upah rendah (kuartil bawah)?
 
 ---
 
@@ -105,7 +107,7 @@ https://docs.google.com/spreadsheets/d/1bcMdN7tpZzxAFVduj5v-pYVy0ovezBrzcRdx14BZ
 
 ## **Dashboard**
 
-
+https://lookerstudio.google.com/reporting/ed363425-9fa0-435e-a832-b236bec5f93e
 
 ---
 
