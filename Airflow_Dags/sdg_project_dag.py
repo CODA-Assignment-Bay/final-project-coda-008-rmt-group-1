@@ -60,6 +60,12 @@ with DAG(
         bash_command='sudo -u airflow python /opt/airflow/scripts/sdg_project_load.py' # Command to run.
     )
 
+    # Define the Load task using BashOperator.
+    sdg_gx = BashOperator(
+        task_id='GX', # Task ID
+        bash_command='sudo -u airflow python /opt/airflow/scripts/sdg_gx.py' # Command to run.
+    )
+
 # Set task dependencies.
 # Extract runs first, then Transform, then Load.
-sdg_extract >> sdg_transform >> sdg_load
+sdg_extract >> sdg_transform >> sdg_gx >> sdg_load
